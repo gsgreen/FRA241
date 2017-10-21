@@ -1,0 +1,88 @@
+<<html>
+<head> 
+<meta charset="utf-8"><!--ภาษาไทย-->
+<script > 
+function displaytable(){
+    var cellA1 = "2";
+    var cellB1 = "4";
+    var cellA2 = "2";
+    var cellB2 = "5";
+    var cellA3 = "2";
+    var cellB3 = "7";
+    var cellA4 = "2";
+    var cellB4 = "3";
+    var SubjectA1 = "FRA111";
+    var SubjectB1 = "FRA112";
+    var SubjectA2 = "FRA211";
+    var SubjectB2 = "FRA212";
+    var SubjectA3 = "FRA311";
+    var SubjectB3 = "FRA312";
+    var SubjectA4 = "FRA411";
+    var SubjectB4 = "FRA412";
+    
+    var secA1 = "<td style=\"background-color: #FF7F50\" colspan="  +cellA1+ "><center>"+SubjectA1+"</center></td>";
+    var secB1 = "<td style=\"background-color: #FF7F50\" colspan="  +cellB1+ "><center>"+SubjectB1+"</center></td>";
+    var secA2 = "<td style=\"background-color: #FF7F50\" colspan="  +cellA2+ "><center>"+SubjectA2+"</center></td>";
+    var secB2 = "<td style=\"background-color: #FF7F50\" colspan="  +cellB2+ "><center>"+SubjectB2+"</center></td>";
+    var secA3 = "<td style=\"background-color: #FF7F50\" colspan="  +cellA3+ "><center>"+SubjectA3+"</center></td>";
+    var secB3 = "<td style=\"background-color: #FF7F50\" colspan="  +cellB3+ "><center>"+SubjectB3+"</center></td>";
+    var secA4 = "<td style=\"background-color: #FF7F50\" colspan="  +cellA4+ "><center>"+SubjectA4+"</center></td>";
+    var secB4 = "<td style=\"background-color: #FF7F50\" colspan="  +cellB4+ "><center>"+SubjectB4+"</center></td>";
+
+    var yearstable1 = "<tr style=\"background-color:#E5E4E2\"><th rowspan=\"2\">ปี1</th><td>A</td>"+secA1+"<tr><td>B</td>"+secB1+"</tr></tr>";
+    var yearstable2 = "<tr style=\"background-color:#00FFFF\"><th rowspan=\"2\">ปี2</th><td>A</td>"+secA2+"<tr><td>B</td>"+secB2+"</tr></tr>";
+    var yearstable3 = "<tr style=\"background-color:#C0C0C0\"><th rowspan=\"2\">ปี3</th><td>A</td>"+secA3+"<tr><td>B</td>"+secB3+"</tr></tr>";
+    var yearstable4 = "<tr style=\"background-color:#808080\"><th rowspan=\"2\">ปี4</th><td>A</td>"+secA4+"<tr><td>B</td>"+secB4+"</tr></tr>";
+
+    var toptable = "<th >08.30-09.30</th><th >09.30-10.30</th><th >11.30-12.30</th><th >13.30-14.30</th><th >15.30-16.30</th><th >17.30-18.30</th><th >19.30-20.30";
+// building the html body.
+var tableBody = "<table class='calendar'><tr style=\"background-color: #6CC417\"><th >วันที่</th><!--1--><th>SEC</th><th colspan=\"7\" scope=\"colgroup\">เวลา</th></tr>";
+ tableBody +="<tr style=\"background-color:yellow;\"><th colspan=\"2\"  >วันจันทร์</th>"+toptable+"</th></tr>";
+ tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "<tr style=\"background-color: #C47451;\"><th colspan=\"2\">วันอังคาร</th>"+toptable+"</th></tr>";
+  tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "<tr style=\"background-color: green;\"><th colspan=\"2\">วันพุธ</th>"+toptable+"</th></tr>";
+ tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "<tr style=\"background-color: orange;\"><th colspan=\"2\">วันพฤหัส</th>"+toptable+"</th></tr>";
+ tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "<tr style=\"background-color: blue;\"><th colspan=\"2\">วันศุกร์</th>"+toptable+"</th></tr>";
+ tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "<tr style=\"background-color: #C47451;\"><th colspan=\"2\">วันเสาร์</th>"+toptable+"</th></tr>";
+ tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "<tr style=\"background-color: red;\"><th colspan=\"2\">วันอาทิตย์</th>"+toptable+"</th></tr>";
+ tableBody +=yearstable1;
+ tableBody +=yearstable2;
+ tableBody +=yearstable3;
+ tableBody +=yearstable4;
+ tableBody += "</table>";
+ // set the content of div .
+ document.getElementById("calendar").innerHTML=tableBody;
+ 
+}
+</script> 
+</head> 
+ 
+<body onload="displaytable()"> 
+ 
+<div id="calendar" style="font-family:Aqua gretesque;font-size:20%;"></div> 
+</body> 
+
+</html>
